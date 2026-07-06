@@ -70,20 +70,20 @@ export const HOME = {
 export const SERVICES = {
   construction:  '/images/23.jpeg',
   mining:        '/images/3.jpeg',
-  logistics:     '/images/5.jpeg',
-  trading:       null,
+  logistics:     '/images/31.jpeg',
+  trading:       '/images/30.jpeg',
 
-  conGallery1:   '/images/21.jpeg',
-  conGallery2:   '/images/22.jpeg',
-  conGallery3:   '/images/24.png',
+  conGallery1:   '/images/14.png',
+  conGallery2:   '/images/21.jpeg',
+  conGallery3:   '/images/22.jpeg',
 
-  minGallery1:   null,
-  minGallery2:   null,
-  minGallery3:   null,
+  minGallery1:   '/images/26.jpg',
+  minGallery2:   '/images/28.jpg',
+  minGallery3:   '/images/27.jpg',
 
-  logGallery1:   null,
-  logGallery2:   null,
-  logGallery3:   null,
+  logGallery1:   '/images/33.jpeg',
+  logGallery2:   '/images/32.webp',
+  logGallery3:   '/images/34.png',
 
   trdGallery1:   null,
   trdGallery2:   null,

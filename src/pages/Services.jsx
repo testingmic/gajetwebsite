@@ -30,7 +30,7 @@ const services = [
     gallery: [
       { key: 'conGallery1', label: '/images/21.jpeg', caption: 'Site preparation & foundations' },
       { key: 'conGallery2', label: '/images/22.jpeg', caption: 'Structural works in progress' },
-      { key: 'conGallery3', label: '/images/24.png', caption: 'Completed residential project' },
+      { key: 'conGallery3', label: '/images/14.png', caption: 'Completed residential project' },
     ],
     color:  'bg-blue-50',
     accent: 'text-blue-600',
@@ -108,11 +108,7 @@ const services = [
     ],
     mainImgKey:    'trading',
     mainImgLabel:  'svc-trading.jpg',
-    gallery: [
-      { key: 'trdGallery1', label: 'svc-trd-gallery-1.jpg', caption: 'Commodities sourcing' },
-      { key: 'trdGallery2', label: 'svc-trd-gallery-2.jpg', caption: 'Port and logistics hub' },
-      { key: 'trdGallery3', label: 'svc-trd-gallery-3.jpg', caption: 'Global market operations' },
-    ],
+    gallery: [],
     color:  'bg-purple-50',
     accent: 'text-purple-600',
     border: 'border-purple-100',
@@ -204,9 +200,11 @@ export default function Services() {
 
               {/* ── Project gallery strip ── */}
               <div>
-                <p className="text-xs font-semibold tracking-widest uppercase text-gold-500 mb-4">
-                  Project Gallery
-                </p>
+                {service.gallery.length > 0 && (
+                  <p className="text-xs font-semibold tracking-widest uppercase text-gold-500 mb-4">
+                    Project Gallery
+                  </p>
+                )}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   {service.gallery.map((g, gi) => (
                     <Animate key={g.key} variant="up" delay={`${gi * 100}ms`} className="group rounded-xl overflow-hidden relative">
