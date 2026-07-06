@@ -68,24 +68,24 @@ export const HOME = {
 // import svcTrdGallery3   from './images/svc-trd-gallery-3.jpg'
 
 export const SERVICES = {
-  construction:  null, // svc-construction.jpg   — Main construction hero image
-  mining:        null, // svc-mining.jpg         — Main mining hero image
-  logistics:     null, // svc-logistics.jpg      — Main logistics hero image
-  trading:       null, // svc-trading.jpg        — Main trading hero image
+  construction:  '/images/23.jpeg',
+  mining:        '/images/3.jpeg',
+  logistics:     '/images/5.jpeg',
+  trading:       null,
 
-  conGallery1:   null, // svc-con-gallery-1.jpg  — Construction gallery slot 1
-  conGallery2:   null, // svc-con-gallery-2.jpg  — Construction gallery slot 2
-  conGallery3:   null, // svc-con-gallery-3.jpg  — Construction gallery slot 3
+  conGallery1:   '/images/21.jpeg',
+  conGallery2:   '/images/22.jpeg',
+  conGallery3:   '/images/24.png',
 
-  minGallery1:   null, // svc-min-gallery-1.jpg  — Mining gallery slot 1
-  minGallery2:   null, // svc-min-gallery-2.jpg  — Mining gallery slot 2
-  minGallery3:   null, // svc-min-gallery-3.jpg  — Mining gallery slot 3
+  minGallery1:   null,
+  minGallery2:   null,
+  minGallery3:   null,
 
-  logGallery1:   null, // svc-log-gallery-1.jpg  — Logistics gallery slot 1
-  logGallery2:   null, // svc-log-gallery-2.jpg  — Logistics gallery slot 2
-  logGallery3:   null, // svc-log-gallery-3.jpg  — Logistics gallery slot 3
+  logGallery1:   null,
+  logGallery2:   null,
+  logGallery3:   null,
 
-  trdGallery1:   null, // svc-trd-gallery-1.jpg  — Trading gallery slot 1
-  trdGallery2:   null, // svc-trd-gallery-2.jpg  — Trading gallery slot 2
-  trdGallery3:   null, // svc-trd-gallery-3.jpg  — Trading gallery slot 3
+  trdGallery1:   null,
+  trdGallery2:   null,
+  trdGallery3:   null,
 };
