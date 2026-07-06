@@ -107,7 +107,7 @@ export default function Home() {
               <div className="relative animate-float">
                 <div className="w-72 h-72 rounded-full bg-white/5 border border-gold-400/30 flex items-center justify-center">
                   <div className="w-52 h-52 rounded-full bg-white/5 border border-gold-400/20 flex items-center justify-center">
-                    <EagleLogo className="w-36 h-36" />
+                    <img src="/images/logo.jpeg" alt="Gajet Resources" className="w-36 h-36 rounded-lg" />
                   </div>
                 </div>
                 <svg className="absolute inset-0 w-full h-full animate-[spin_20s_linear_infinite]" viewBox="0 0 288 288">
