@@ -5,6 +5,7 @@ import {
 } from 'lucide-react';
 import SectionHeader from '../components/SectionHeader';
 import ImgSlot from '../components/ImgSlot';
+import Animate from '../components/Animate';
 import { SERVICES } from '../assets/images';
 
 const services = [
@@ -141,8 +142,8 @@ export default function Services() {
             <span className="text-gold-400 font-semibold text-sm tracking-widest uppercase">What We Do</span>
             <div className="h-px w-10 bg-gold-400" />
           </div>
-          <h1 className="font-display font-black text-4xl sm:text-5xl text-white mb-5">Our Services</h1>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto">
+          <h1 className="font-display font-black text-4xl sm:text-5xl text-white mb-5 animate-slide-up" style={{ animationDelay: '200ms' }}>Our Services</h1>
+          <p className="text-white/60 text-lg max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '350ms' }}>
             Integrated solutions across four key economic sectors — delivered with excellence, safety, and integrity.
           </p>
         </div>
@@ -165,7 +166,7 @@ export default function Services() {
               <div className={`grid lg:grid-cols-2 gap-12 items-center mb-12`}>
 
                 {/* Content */}
-                <div className={!isEven ? 'lg:order-2' : ''}>
+                <Animate variant={isEven ? 'right' : 'left'} className={!isEven ? 'lg:order-2' : ''}>
                   <div className="flex items-center gap-3 mb-4">
                     <span className="font-display font-black text-5xl text-gray-100">{service.tag}</span>
                     <div className={`w-10 h-10 rounded-xl ${service.color} ${service.border} border flex items-center justify-center`}>
@@ -188,17 +189,17 @@ export default function Services() {
                   <Link to="/contact" className="btn-primary">
                     Enquire Now <ArrowRight size={18} />
                   </Link>
-                </div>
+                </Animate>
 
                 {/* Main service image */}
-                <div className={`rounded-2xl overflow-hidden aspect-[4/3] ${!isEven ? 'lg:order-1' : ''}`}>
+                <Animate variant={isEven ? 'left' : 'right'} className={`rounded-2xl overflow-hidden aspect-[4/3] ${!isEven ? 'lg:order-1' : ''}`}>
                   <ImgSlot
                     src={SERVICES[service.mainImgKey]}
                     alt={service.title}
                     label={service.mainImgLabel}
                     className="w-full h-full"
                   />
-                </div>
+                </Animate>
               </div>
 
               {/* ── Project gallery strip ── */}
@@ -207,8 +208,8 @@ export default function Services() {
                   Project Gallery
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  {service.gallery.map(g => (
-                    <div key={g.key} className="group rounded-xl overflow-hidden relative">
+                  {service.gallery.map((g, gi) => (
+                    <Animate key={g.key} variant="up" delay={`${gi * 100}ms`} className="group rounded-xl overflow-hidden relative">
                       <div className="aspect-[4/3]">
                         <ImgSlot
                           src={SERVICES[g.key]}
@@ -227,7 +228,7 @@ export default function Services() {
                       {!SERVICES[g.key] && (
                         <p className="text-center text-gray-400 text-xs mt-2 pb-1">{g.caption}</p>
                       )}
-                    </div>
+                    </Animate>
                   ))}
                 </div>
               </div>

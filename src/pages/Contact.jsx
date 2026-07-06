@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from 'lucide-react';
+import Animate from '../components/Animate';
 
 const services = [
   'Building & Roads Construction',
@@ -49,15 +50,15 @@ export default function Contact() {
         </div>
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <div className="h-px w-10 bg-gold-400" />
+          <div className="flex items-center justify-center gap-2 mb-4 animate-fade-in" style={{ animationDelay: '100ms' }}>
+            <div className="h-px w-10 bg-gold-400 animate-draw-line" />
             <span className="text-gold-400 font-semibold text-sm tracking-widest uppercase">Get In Touch</span>
-            <div className="h-px w-10 bg-gold-400" />
+            <div className="h-px w-10 bg-gold-400 animate-draw-line" />
           </div>
-          <h1 className="font-display font-black text-4xl sm:text-5xl text-white mb-5">
+          <h1 className="font-display font-black text-4xl sm:text-5xl text-white mb-5 animate-slide-up" style={{ animationDelay: '200ms' }}>
             Contact Us
           </h1>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto">
+          <p className="text-white/60 text-lg max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '350ms' }}>
             Ready to discuss your next project or explore a partnership? Our team is here to help.
           </p>
         </div>
@@ -68,7 +69,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-10">
             {/* Contact Info */}
-            <div className="lg:col-span-1 space-y-6">
+            <Animate variant="right" className="lg:col-span-1 space-y-6">
               <div>
                 <h2 className="font-display font-bold text-2xl text-navy-900 mb-2">Contact Information</h2>
                 <p className="text-gray-500 text-sm leading-relaxed">
@@ -97,8 +98,8 @@ export default function Contact() {
                   title: 'Business Hours',
                   lines: ['Monday – Friday: 8:00 AM – 5:00 PM', 'Saturday: 9:00 AM – 1:00 PM'],
                 },
-              ].map(({ icon: Icon, title, lines }) => (
-                <div key={title} className="flex gap-4 p-5 bg-white rounded-xl border border-gray-100 shadow-sm">
+              ].map(({ icon: Icon, title, lines }, i) => (
+                <div key={title} className="flex gap-4 p-5 bg-white rounded-xl border border-gray-100 shadow-sm hover-lift" style={{ animationDelay: `${i * 80}ms` }}>
                   <div className="w-10 h-10 rounded-lg bg-gold-100 flex items-center justify-center shrink-0">
                     <Icon size={18} className="text-gold-600" />
                   </div>
@@ -110,10 +111,10 @@ export default function Contact() {
                   </div>
                 </div>
               ))}
-            </div>
+            </Animate>
 
             {/* Contact Form */}
-            <div className="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
+            <Animate variant="left" className="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
               {submitted ? (
                 <div className="flex flex-col items-center justify-center h-full min-h-[400px] text-center gap-4">
                   <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center">
@@ -211,7 +212,7 @@ export default function Contact() {
                   </form>
                 </>
               )}
-            </div>
+            </Animate>
           </div>
         </div>
       </section>

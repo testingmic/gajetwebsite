@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Eye, Target, Heart, CheckCircle2 } from 'lucide-react';
 import SectionHeader from '../components/SectionHeader';
 import EagleLogo from '../components/EagleLogo';
+import Animate from '../components/Animate';
 
 const values = [
   {
@@ -47,15 +48,15 @@ export default function About() {
         </div>
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <div className="h-px w-10 bg-gold-400" />
+          <div className="flex items-center justify-center gap-2 mb-4 animate-fade-in" style={{ animationDelay: '100ms' }}>
+            <div className="h-px w-10 bg-gold-400 animate-draw-line" />
             <span className="text-gold-400 font-semibold text-sm tracking-widest uppercase">About Us</span>
-            <div className="h-px w-10 bg-gold-400" />
+            <div className="h-px w-10 bg-gold-400 animate-draw-line" />
           </div>
-          <h1 className="font-display font-black text-4xl sm:text-5xl text-white mb-5">
+          <h1 className="font-display font-black text-4xl sm:text-5xl text-white mb-5 animate-slide-up" style={{ animationDelay: '200ms' }}>
             Our Story & Identity
           </h1>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto">
+          <p className="text-white/60 text-lg max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '350ms' }}>
             A company built on the foundations of excellence, integrity, and leadership — inspired by the eagle.
           </p>
         </div>
@@ -65,7 +66,7 @@ export default function About() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <Animate variant="right">
               <span className="inline-block text-gold-500 font-semibold text-sm tracking-widest uppercase mb-3">Company Overview</span>
               <h2 className="font-display font-bold text-3xl md:text-4xl text-navy-900 leading-tight mb-5">
                 Gajet Resources International Limited
@@ -88,15 +89,10 @@ export default function About() {
               <Link to="/services" className="btn-primary">
                 Our Services <ArrowRight size={18} />
               </Link>
-            </div>
-            <div className="rounded-2xl overflow-hidden aspect-[4/3] bg-gray-100">
-              <img
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&auto=format&fit=crop&q=80"
-                alt="Corporate building"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
+            </Animate>
+            <Animate variant="left" className="rounded-2xl overflow-hidden aspect-[4/3] bg-gray-100">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&auto=format&fit=crop&q=80" alt="Corporate building" className="w-full h-full object-cover" loading="lazy" />
+            </Animate>
           </div>
         </div>
       </section>
@@ -104,13 +100,11 @@ export default function About() {
       {/* Vision & Mission */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            badge="Direction & Purpose"
-            title="Our Vision & Mission"
-            subtitle="Every decision, every project, every partnership — guided by a clear sense of purpose."
-          />
+          <Animate variant="up">
+            <SectionHeader badge="Direction & Purpose" title="Our Vision & Mission" subtitle="Every decision, every project, every partnership — guided by a clear sense of purpose." />
+          </Animate>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-navy-900 rounded-2xl p-8 text-white relative overflow-hidden">
+            <Animate variant="left" className="bg-navy-900 rounded-2xl p-8 text-white relative overflow-hidden">
               <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-gold-500/10 -translate-y-1/2 translate-x-1/2" />
               <div className="relative">
                 <div className="w-12 h-12 rounded-xl bg-gold-500/20 flex items-center justify-center mb-6">
@@ -121,8 +115,8 @@ export default function About() {
                   &ldquo;To inspire the world and become one of the world&apos;s most successful companies.&rdquo;
                 </p>
               </div>
-            </div>
-            <div className="bg-gold-500 rounded-2xl p-8 relative overflow-hidden">
+            </Animate>
+            <Animate variant="right" className="bg-gold-500 rounded-2xl p-8 relative overflow-hidden">
               <div className="absolute bottom-0 left-0 w-40 h-40 rounded-full bg-navy-900/10 translate-y-1/2 -translate-x-1/2" />
               <div className="relative">
                 <div className="w-12 h-12 rounded-xl bg-navy-900/20 flex items-center justify-center mb-6">
@@ -133,7 +127,7 @@ export default function About() {
                   &ldquo;To deliver the best customer service experience by consistently living our values and exceeding customer expectations.&rdquo;
                 </p>
               </div>
-            </div>
+            </Animate>
           </div>
         </div>
       </section>
@@ -141,20 +135,17 @@ export default function About() {
       {/* Core Values */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            badge="What We Stand For"
-            title="Our Core Values"
-            subtitle="Our values and governance are guided by strong moral principles, humility, and a recognition that our work is sustained by the grace of God."
-          />
+          <Animate variant="up">
+            <SectionHeader badge="What We Stand For" title="Our Core Values" subtitle="Our values and governance are guided by strong moral principles, humility, and a recognition that our work is sustained by the grace of God." />
+          </Animate>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map(v => (
-              <div key={v.title} className="text-center p-8 rounded-2xl bg-gray-50 card-hover border border-gray-100 group">
+            {values.map((v, i) => (
+              <Animate key={v.title} variant="up" delay={`${i * 100}ms`}
+                className="text-center p-8 rounded-2xl bg-gray-50 hover-lift border border-gray-100 group">
                 <div className="text-5xl mb-5">{v.icon}</div>
-                <h3 className="font-display font-bold text-xl text-navy-900 mb-3 group-hover:text-gold-600 transition-colors">
-                  {v.title}
-                </h3>
+                <h3 className="font-display font-bold text-xl text-navy-900 mb-3 group-hover:text-gold-600 transition-colors">{v.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{v.desc}</p>
-              </div>
+              </Animate>
             ))}
           </div>
         </div>

@@ -28,6 +28,66 @@
   }
 }
 
+/* ── Page transition ─────────────────────────────────────────── */
+.page-enter {
+  animation: pageEnterKf 0.42s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes pageEnterKf {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Stagger helper ──────────────────────────────────────────── */
+.stagger > * { animation-fill-mode: both; }
+.stagger > *:nth-child(1)  { animation-delay: 0ms; }
+.stagger > *:nth-child(2)  { animation-delay: 80ms; }
+.stagger > *:nth-child(3)  { animation-delay: 160ms; }
+.stagger > *:nth-child(4)  { animation-delay: 240ms; }
+.stagger > *:nth-child(5)  { animation-delay: 320ms; }
+.stagger > *:nth-child(6)  { animation-delay: 400ms; }
+
+/* ── Gold shimmer text ───────────────────────────────────────── */
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #f59e0b 0%,
+    #fde68a 40%,
+    #f59e0b 60%,
+    #d97706 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+@keyframes shimmer {
+  from { background-position: 200% center; }
+  to   { background-position: -200% center; }
+}
+
+/* ── Hover lift ──────────────────────────────────────────────── */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -12px rgba(10, 22, 40, 0.18);
+}
+
+/* ── Gold underline on section badges ───────────────────────── */
+.badge-line::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: #f59e0b;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.badge-line:hover::after { transform: scaleX(1); }
+
 @layer components {
   .section-title {
     @apply font-display font-bold text-navy-900;

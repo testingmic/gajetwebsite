@@ -4,6 +4,7 @@ import {
   CheckCircle2, AlertTriangle, BookOpen, Recycle
 } from 'lucide-react';
 import SectionHeader from '../components/SectionHeader';
+import Animate from '../components/Animate';
 
 const govPillars = [
   { icon: Scale, title: 'Clear Leadership Structures', desc: 'Defined accountability and decision-making frameworks at every level of the organisation.' },
@@ -42,15 +43,15 @@ export default function Governance() {
         </div>
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <div className="h-px w-10 bg-gold-400" />
+          <div className="flex items-center justify-center gap-2 mb-4 animate-fade-in" style={{ animationDelay: '100ms' }}>
+            <div className="h-px w-10 bg-gold-400 animate-draw-line" />
             <span className="text-gold-400 font-semibold text-sm tracking-widest uppercase">How We Operate</span>
-            <div className="h-px w-10 bg-gold-400" />
+            <div className="h-px w-10 bg-gold-400 animate-draw-line" />
           </div>
-          <h1 className="font-display font-black text-4xl sm:text-5xl text-white mb-5">
+          <h1 className="font-display font-black text-4xl sm:text-5xl text-white mb-5 animate-slide-up" style={{ animationDelay: '200ms' }}>
             Governance, HSE & Sustainability
           </h1>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto">
+          <p className="text-white/60 text-lg max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '350ms' }}>
             Sound governance, an uncompromising safety culture, and a long-term commitment to sustainability are the pillars of how we operate.
           </p>
         </div>
@@ -60,7 +61,7 @@ export default function Governance() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            <div>
+            <Animate variant="right">
               <span className="inline-block text-gold-500 font-semibold text-sm tracking-widest uppercase mb-3">Corporate Governance</span>
               <h2 className="font-display font-bold text-3xl md:text-4xl text-navy-900 leading-tight mb-5">
                 Governed by Integrity, Driven by Accountability
@@ -73,26 +74,22 @@ export default function Governance() {
                 Our governance framework promotes a culture of responsibility and integrity at all levels of the
                 organisation, ensuring that decisions align with our values and strategic objectives.
               </p>
-            </div>
-            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img
-                src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800&auto=format&fit=crop&q=80"
-                alt="Corporate governance"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
+            </Animate>
+            <Animate variant="left" className="rounded-2xl overflow-hidden aspect-[4/3]">
+              <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800&auto=format&fit=crop&q=80" alt="Corporate governance" className="w-full h-full object-cover" loading="lazy" />
+            </Animate>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {govPillars.map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="p-6 rounded-2xl bg-gray-50 border border-gray-100 card-hover group">
+            {govPillars.map(({ icon: Icon, title, desc }, i) => (
+              <Animate key={title} variant="up" delay={`${i * 80}ms`}
+                className="p-6 rounded-2xl bg-gray-50 border border-gray-100 hover-lift group">
                 <div className="w-11 h-11 rounded-xl bg-navy-100 flex items-center justify-center mb-4 group-hover:bg-navy-900 transition-colors duration-300">
                   <Icon size={20} className="text-navy-700 group-hover:text-gold-400 transition-colors duration-300" />
                 </div>
                 <h4 className="font-display font-bold text-navy-900 mb-2">{title}</h4>
                 <p className="text-gray-500 text-sm leading-relaxed">{desc}</p>
-              </div>
+              </Animate>
             ))}
           </div>
         </div>
