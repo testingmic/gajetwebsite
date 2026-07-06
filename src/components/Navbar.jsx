@@ -36,7 +36,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <EagleLogo className="w-10 h-10" />
+            <img src="/images/logo.jpeg" alt="Gajet Resources" className="w-10 h-10 rounded-lg" />
             <div>
               <p className="text-white font-display font-bold text-base leading-tight">
                 GAJET RESOURCES

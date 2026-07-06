@@ -81,22 +81,22 @@ export default function Contact() {
                 {
                   icon: MapPin,
                   title: 'Our Location',
-                  lines: ['Gajet Resources International Limited', 'Ghana, West Africa'],
+                  lines: ['Gajet Resources International Limited', 'P. O. BOX GP O20376', 'Accra, Ghana'],
                 },
                 {
                   icon: Phone,
                   title: 'Phone Number',
-                  lines: ['+233 (0) 000 000 000', '+233 (0) 000 000 001'],
+                  lines: ['+233 (0) 555 782 575'],
                 },
                 {
                   icon: Mail,
                   title: 'Email Address',
-                  lines: ['info@gajetresources.com', 'projects@gajetresources.com'],
+                  lines: ['info@gajetresources.com'],
                 },
                 {
                   icon: Clock,
                   title: 'Business Hours',
-                  lines: ['Monday – Friday: 8:00 AM – 5:00 PM', 'Saturday: 9:00 AM – 1:00 PM'],
+                  lines: ['Monday – Friday: 8:00 AM – 5:00 PM'],
                 },
               ].map(({ icon: Icon, title, lines }, i) => (
                 <div key={title} className="flex gap-4 p-5 bg-white rounded-xl border border-gray-100 shadow-sm hover-lift" style={{ animationDelay: `${i * 80}ms` }}>
@@ -156,7 +156,7 @@ export default function Contact() {
                         <input
                           type="email" name="email" value={form.email}
                           onChange={handleChange}
-                          placeholder="john@example.com"
+                          placeholder="info@gajetresources.com"
                           className={`w-full border rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 transition-colors ${errors.email ? 'border-red-400 bg-red-50' : 'border-gray-200 bg-gray-50'}`}
                         />
                         {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
@@ -168,7 +168,7 @@ export default function Contact() {
                         <input
                           type="tel" name="phone" value={form.phone}
                           onChange={handleChange}
-                          placeholder="+233 00 000 0000"
+                          placeholder="+233 555 782 575"
                           className="w-full border border-gray-200 bg-gray-50 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 transition-colors"
                         />
                       </div>

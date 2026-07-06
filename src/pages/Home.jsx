@@ -41,16 +41,16 @@ const whyUs = [
 ];
 
 const featuredProjects = [
-  { imgKey: 'project1', label: 'home-project-1.jpg', title: 'Residential Estate Development',  category: 'Building & Construction', location: 'Ghana',      desc: 'A landmark residential development delivering modern housing with quality craftsmanship and on-time execution.' },
-  { imgKey: 'project2', label: 'home-project-2.jpg', title: 'Mine Site Operations Support',     category: 'Mining Services',         location: 'West Africa', desc: 'Full operational and logistical support for an active mining site, ensuring efficiency, safety, and environmental compliance.' },
-  { imgKey: 'project3', label: 'home-project-3.jpg', title: 'National Road Rehabilitation',     category: 'Roads Construction',      location: 'Ghana',      desc: 'Rehabilitation of a major arterial road network using modern civil engineering methods and durable materials.' },
+  { imgKey: 'project1', label: 'home-project-1.jpeg', title: 'Residential Estate Development',  category: 'Building & Construction', location: 'Ghana',      desc: 'A landmark residential development delivering modern housing with quality craftsmanship and on-time execution.' },
+  { imgKey: 'project2', label: 'home-project-2.jpeg', title: 'Mine Site Operations Support',     category: 'Mining Services',         location: 'West Africa', desc: 'Full operational and logistical support for an active mining site, ensuring efficiency, safety, and environmental compliance.' },
+  { imgKey: 'project3', label: 'home-project-3.jpeg', title: 'National Road Rehabilitation',     category: 'Roads Construction',      location: 'Ghana',      desc: 'Rehabilitation of a major arterial road network using modern civil engineering methods and durable materials.' },
 ];
 
 const team = [
-  { imgKey: 'teamMember1', label: 'team-member-1.jpg', name: 'Chief Executive Officer',            role: 'Executive Leadership' },
-  { imgKey: 'teamMember2', label: 'team-member-2.jpg', name: 'Chief Operations Officer',           role: 'Operations & Delivery' },
-  { imgKey: 'teamMember3', label: 'team-member-3.jpg', name: 'Director of Projects',               role: 'Project Management' },
-  { imgKey: 'teamMember4', label: 'team-member-4.jpg', name: 'Director of Business Development',  role: 'Strategy & Growth' },
+  { imgKey: 'teamMember1', label: 'team-member-1.jpeg', name: 'Chief Executive Officer',            role: 'Executive Leadership' },
+  { imgKey: 'teamMember2', label: 'team-member-2.jpeg', name: 'Chief Operations Officer',           role: 'Operations & Delivery' },
+  { imgKey: 'teamMember3', label: 'team-member-3.jpeg', name: 'Director of Projects',               role: 'Project Management' },
+  { imgKey: 'teamMember4', label: 'team-member-4.jpeg', name: 'Director of Business Development',  role: 'Strategy & Growth' },
 ];
 
 export default function Home() {
@@ -167,7 +167,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <Animate variant="right" className="relative">
               <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-                <ImgSlot src={HOME.about} alt="About Gajet Resources" label="home-about.jpg" className="w-full h-full" />
+                <ImgSlot src={'/images/1.jpeg'} alt="About Gajet Resources" label="home-about.jpeg" className="w-full h-full" />
               </div>
               <div className="absolute -bottom-5 -right-5 bg-gold-500 rounded-2xl px-6 py-5 shadow-xl hidden sm:block animate-scale-in" style={{ animationDelay: '400ms' }}>
                 <p className="font-display font-black text-4xl text-navy-900">10+</p>
@@ -243,11 +243,11 @@ export default function Home() {
             <SectionHeader badge="Gallery" title="Our Work in Action" subtitle="Glimpses from across our construction sites, mining operations, and logistics network." light />
           </Animate>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 h-[480px] md:h-[520px]">
-            <Animate variant="scale-sm" delay="0ms"   className="row-span-2 rounded-2xl overflow-hidden h-full"><ImgSlot src={HOME.gallery1} alt="Gallery 1" label="home-gallery-1.jpg&#10;(tall left panel)" className="w-full h-full" /></Animate>
-            <Animate variant="scale-sm" delay="100ms" className="rounded-2xl overflow-hidden"><ImgSlot src={HOME.gallery2} alt="Gallery 2" label="home-gallery-2.jpg" className="w-full h-full" /></Animate>
-            <Animate variant="scale-sm" delay="160ms" className="rounded-2xl overflow-hidden"><ImgSlot src={HOME.gallery3} alt="Gallery 3" label="home-gallery-3.jpg" className="w-full h-full" /></Animate>
-            <Animate variant="scale-sm" delay="220ms" className="rounded-2xl overflow-hidden"><ImgSlot src={HOME.gallery4} alt="Gallery 4" label="home-gallery-4.jpg" className="w-full h-full" /></Animate>
-            <Animate variant="scale-sm" delay="280ms" className="rounded-2xl overflow-hidden"><ImgSlot src={HOME.gallery5} alt="Gallery 5" label="home-gallery-5.jpg" className="w-full h-full" /></Animate>
+            <Animate variant="scale-sm" delay="0ms"   className="row-span-2 rounded-2xl overflow-hidden h-full"><ImgSlot src={HOME.gallery1} alt="Gallery 1" label="home-gallery-1.jpeg&#10;(tall left panel)" className="w-full h-full" /></Animate>
+            <Animate variant="scale-sm" delay="100ms" className="rounded-2xl overflow-hidden"><ImgSlot src={HOME.gallery2} alt="Gallery 2" label="home-gallery-2.jpeg" className="w-full h-full" /></Animate>
+            <Animate variant="scale-sm" delay="160ms" className="rounded-2xl overflow-hidden"><ImgSlot src={HOME.gallery3} alt="Gallery 3" label="home-gallery-3.jpeg" className="w-full h-full" /></Animate>
+            <Animate variant="scale-sm" delay="220ms" className="rounded-2xl overflow-hidden"><ImgSlot src={HOME.gallery4} alt="Gallery 4" label="home-gallery-4.jpeg" className="w-full h-full" /></Animate>
+            <Animate variant="scale-sm" delay="280ms" className="rounded-2xl overflow-hidden"><ImgSlot src={HOME.gallery5} alt="Gallery 5" label="home-gallery-5.jpeg" className="w-full h-full" /></Animate>
           </div>
         </div>
       </section>

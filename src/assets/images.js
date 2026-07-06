@@ -33,16 +33,16 @@
 // import teamMember4     from './images/team-member-4.jpg'
 
 export const HOME = {
-  heroBg:     null, // home-hero-bg.jpg       — full-bleed hero background
+  heroBg:     '/images/21.jpeg', // home-hero-bg.jpg       — full-bleed hero background
   about:      null, // home-about.jpg         — About strip left image
-  project1:   null, // home-project-1.jpg     — Featured project card 1
-  project2:   null, // home-project-2.jpg     — Featured project card 2
-  project3:   null, // home-project-3.jpg     — Featured project card 3
-  gallery1:   null, // home-gallery-1.jpg     — Gallery mosaic top-left (landscape)
-  gallery2:   null, // home-gallery-2.jpg     — Gallery mosaic top-right tall
-  gallery3:   null, // home-gallery-3.jpg     — Gallery mosaic bottom-left
-  gallery4:   null, // home-gallery-4.jpg     — Gallery mosaic bottom-center
-  gallery5:   null, // home-gallery-5.jpg     — Gallery mosaic bottom-right
+  project1:   '/images/18.jpeg', // home-project-1.jpg     — Featured project card 1
+  project2:   '/images/4.jpeg', // home-project-2.jpg     — Featured project card 2
+  project3:   '/images/25.png', // home-project-3.jpg     — Featured project card 3
+  gallery1:   '/images/16.jpeg', // home-gallery-1.jpg     — Gallery mosaic top-left (landscape)
+  gallery2:   '/images/19.jpeg', // home-gallery-2.jpg     — Gallery mosaic top-right tall
+  gallery3:   '/images/22.jpeg', // home-gallery-3.jpg     — Gallery mosaic bottom-left
+  gallery4:   '/images/17.jpeg', // home-gallery-4.jpg     — Gallery mosaic bottom-center
+  gallery5:   '/images/2.jpeg', // home-gallery-5.jpg     — Gallery mosaic bottom-right
   teamMember1: null, // team-member-1.jpg     — Team photo 1
   teamMember2: null, // team-member-2.jpg     — Team photo 2
   teamMember3: null, // team-member-3.jpg     — Team photo 3

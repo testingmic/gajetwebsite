@@ -26,11 +26,11 @@ const services = [
       'Timely delivery and cost efficiency',
     ],
     mainImgKey:    'construction',
-    mainImgLabel:  'svc-construction.jpg',
+    mainImgLabel:  '/images/23.jpeg',
     gallery: [
-      { key: 'conGallery1', label: 'svc-con-gallery-1.jpg', caption: 'Site preparation & foundations' },
-      { key: 'conGallery2', label: 'svc-con-gallery-2.jpg', caption: 'Structural works in progress' },
-      { key: 'conGallery3', label: 'svc-con-gallery-3.jpg', caption: 'Completed residential project' },
+      { key: 'conGallery1', label: '/images/21.jpeg', caption: 'Site preparation & foundations' },
+      { key: 'conGallery2', label: '/images/22.jpeg', caption: 'Structural works in progress' },
+      { key: 'conGallery3', label: '/images/24.png', caption: 'Completed residential project' },
     ],
     color:  'bg-blue-50',
     accent: 'text-blue-600',
@@ -53,7 +53,7 @@ const services = [
       'Sustainable resource development',
     ],
     mainImgKey:    'mining',
-    mainImgLabel:  'svc-mining.jpg',
+    mainImgLabel:  '/images/3.jpeg',
     gallery: [
       { key: 'minGallery1', label: 'svc-min-gallery-1.jpg', caption: 'Exploration and survey work' },
       { key: 'minGallery2', label: 'svc-min-gallery-2.jpg', caption: 'Mine development operations' },
@@ -80,7 +80,7 @@ const services = [
       'Reliable last-mile delivery',
     ],
     mainImgKey:    'logistics',
-    mainImgLabel:  'svc-logistics.jpg',
+    mainImgLabel:  '/images/5.jpeg',
     gallery: [
       { key: 'logGallery1', label: 'svc-log-gallery-1.jpg', caption: 'Heavy haulage fleet' },
       { key: 'logGallery2', label: 'svc-log-gallery-2.jpg', caption: 'Warehouse and storage' },
