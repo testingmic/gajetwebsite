@@ -291,22 +291,11 @@ export default function Home() {
       </section>
 
       {/* ── MEET THE TEAM ────────────────────────────────────────── */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-10 pb-0 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Animate variant="up">
             <SectionHeader badge="Our People" title="Leadership Behind the Vision" subtitle="Experienced leaders who bring strategic clarity, operational depth, and an unwavering commitment to delivering results." />
           </Animate>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, i) => (
-              <Animate key={member.name} variant="up" delay={`${i * 100}ms`} className="text-center group">
-                <div className="w-36 h-36 rounded-full overflow-hidden mx-auto mb-5 ring-4 ring-white shadow-lg group-hover:ring-gold-400 transition-all duration-300 animate-pulse-gold">
-                  <ImgSlot src={HOME[member.imgKey]} alt={member.name} label={member.label} className="w-full h-full" />
-                </div>
-                <h4 className="font-display font-bold text-navy-900 text-base mb-1 leading-snug">{member.name}</h4>
-                <p className="text-gold-500 text-sm font-medium">{member.role}</p>
-              </Animate>
-            ))}
-          </div>
         </div>
       </section>
 
