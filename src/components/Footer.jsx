@@ -48,6 +48,7 @@ export default function Footer() {
                 { to: '/about', label: 'About Us' },
                 { to: '/services', label: 'Our Services' },
                 { to: '/governance', label: 'Governance & HSE' },
+                { to: '/csr', label: 'CSR' },
                 { to: '/contact', label: 'Contact Us' },
               ].map(link => (
                 <li key={link.to}>
@@ -68,18 +69,18 @@ export default function Footer() {
             <h4 className="font-display font-semibold text-white mb-5 text-base">Our Services</h4>
             <ul className="space-y-3">
               {[
-                'Building & Roads Construction',
-                'Mining Services',
-                'Logistics Services',
-                'Commodities Trading',
-              ].map(service => (
-                <li key={service}>
+                { to: '/services/construction', label: 'Building & Roads Construction' },
+                { to: '/services/mining',        label: 'Mining Services' },
+                { to: '/services/logistics',     label: 'Logistics Services' },
+                { to: '/services/trading',       label: 'Commodities Trading' },
+              ].map(({ to, label }) => (
+                <li key={label}>
                   <Link
-                    to="/services"
+                    to={to}
                     className="text-white/60 hover:text-gold-400 text-sm flex items-center gap-2 transition-colors duration-200"
                   >
                     <ArrowRight size={14} />
-                    {service}
+                    {label}
                   </Link>
                 </li>
               ))}

@@ -5,7 +5,12 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
+import Construction from './pages/services/Construction';
+import Mining from './pages/services/Mining';
+import Logistics from './pages/services/Logistics';
+import Trading from './pages/services/Trading';
 import Governance from './pages/Governance';
+import CSR from './pages/CSR';
 import Contact from './pages/Contact';
 
 function ScrollToTop() {
@@ -17,14 +22,18 @@ function ScrollToTop() {
 function AnimatedRoutes() {
   const location = useLocation();
   return (
-    // key re-mounts the div on every route change → re-triggers page-enter CSS anim
     <div key={location.pathname} className="page-enter flex-1">
       <Routes location={location}>
-        <Route path="/"           element={<Home />} />
-        <Route path="/about"      element={<About />} />
-        <Route path="/services"   element={<Services />} />
-        <Route path="/governance" element={<Governance />} />
-        <Route path="/contact"    element={<Contact />} />
+        <Route path="/"                      element={<Home />} />
+        <Route path="/about"                 element={<About />} />
+        <Route path="/services"              element={<Services />} />
+        <Route path="/services/construction" element={<Construction />} />
+        <Route path="/services/mining"       element={<Mining />} />
+        <Route path="/services/logistics"    element={<Logistics />} />
+        <Route path="/services/trading"      element={<Trading />} />
+        <Route path="/governance"            element={<Governance />} />
+        <Route path="/csr"                   element={<CSR />} />
+        <Route path="/contact"               element={<Contact />} />
       </Routes>
     </div>
   );

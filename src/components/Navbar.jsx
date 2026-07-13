@@ -6,8 +6,9 @@ import EagleLogo from './EagleLogo';
 const navLinks = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
-  { to: '/services', label: 'Services' },
+  { to: '/services', label: 'Services', matchPrefix: '/services' },
   { to: '/governance', label: 'Governance' },
+  { to: '/csr', label: 'CSR' },
   { to: '/contact', label: 'Contact' },
 ];
 
@@ -49,19 +50,24 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-1">
-            {navLinks.map(link => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                  location.pathname === link.to
-                    ? 'text-gold-400 bg-white/10'
-                    : 'text-white/80 hover:text-gold-400 hover:bg-white/5'
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map(link => {
+              const isActive = link.matchPrefix
+                ? location.pathname.startsWith(link.matchPrefix)
+                : location.pathname === link.to;
+              return (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className={`px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                    isActive
+                      ? 'text-gold-400 bg-white/10'
+                      : 'text-white/80 hover:text-gold-400 hover:bg-white/5'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </nav>
 
           <div className="hidden lg:block">
@@ -85,19 +91,24 @@ export default function Navbar() {
       {menuOpen && (
         <div className="lg:hidden bg-navy-950 border-t border-white/10">
           <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
-            {navLinks.map(link => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className={`px-4 py-3 rounded-md text-sm font-medium transition-colors ${
-                  location.pathname === link.to
-                    ? 'text-gold-400 bg-white/10'
-                    : 'text-white/80 hover:text-gold-400 hover:bg-white/5'
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map(link => {
+              const isActive = link.matchPrefix
+                ? location.pathname.startsWith(link.matchPrefix)
+                : location.pathname === link.to;
+              return (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className={`px-4 py-3 rounded-md text-sm font-medium transition-colors ${
+                    isActive
+                      ? 'text-gold-400 bg-white/10'
+                      : 'text-white/80 hover:text-gold-400 hover:bg-white/5'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
             <Link
               to="/contact"
               className="mt-3 btn-primary text-sm justify-center"
