@@ -81,12 +81,12 @@ export default function Contact() {
                 {
                   icon: MapPin,
                   title: 'Our Location',
-                  lines: ['Gajet Resources International Limited', 'P. O. BOX GP O20376', 'Accra, Ghana'],
+                  lines: ['Gajet Resources International Limited', 'P. O. Box GP0 20376, Accra - Ghana'],
                 },
                 {
                   icon: Phone,
                   title: 'Phone Number',
-                  lines: ['+233 (0) 555 782 575'],
+                  lines: ['+233 (0) 55 578 2575'],
                 },
                 {
                   icon: Mail,

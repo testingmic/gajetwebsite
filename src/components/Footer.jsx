@@ -93,11 +93,11 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex gap-3 text-sm text-white/60">
                 <MapPin size={16} className="text-gold-400 mt-0.5 shrink-0" />
-                <span>Gajet Resources International Limited, P. O. BOX GP O20376, Accra, Ghana</span>
+                <span>Gajet Resources International Limited, P. O. Box GP0 20376, Accra - Ghana</span>
               </li>
               <li className="flex gap-3 text-sm text-white/60">
                 <Phone size={16} className="text-gold-400 mt-0.5 shrink-0" />
-                <span>+233 (0) 555 782 575</span>
+                <span>+233 (0) 55 578 2575</span>
               </li>
               <li className="flex gap-3 text-sm text-white/60">
                 <Mail size={16} className="text-gold-400 mt-0.5 shrink-0" />
