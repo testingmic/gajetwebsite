@@ -17,7 +17,7 @@
  */
 
 export const HOME = {
-  heroBg:     '/images/21.jpeg', // home-hero-bg.jpg       — full-bleed hero background
+  heroBg:     '/images/23.jpg', // home-hero-bg.jpg       — full-bleed hero background
   about:      null, // home-about.jpg         — About strip left image
   project1:   '/images/18.jpg', // home-project-1.jpg     — Featured project card 1
   project2:   '/images/4.jpeg', // home-project-2.jpg     — Featured project card 2
