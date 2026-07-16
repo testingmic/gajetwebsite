@@ -37,7 +37,13 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <img src="/images/logo.jpeg" alt="Gajet Resources" className="w-10 h-10 rounded-lg" />
+            <div className="relative w-32 h-10 shrink-0">
+              <img
+                src="/images/logo.jpeg"
+                alt="Gajet Resources"
+                className="absolute top-0 left-0 w-32 h-24 rounded-xl shadow-xl ring-2 ring-white/20 object-cover"
+              />
+            </div>
             <div>
               <p className="text-white font-display font-bold text-base leading-tight">
                 GAJET RESOURCES

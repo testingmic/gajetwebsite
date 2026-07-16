@@ -19,7 +19,7 @@ const services = [
     description:
       'Residential and commercial buildings, road and civil infrastructure — delivered with modern engineering and strict quality control.',
     imgKey: 'construction',
-    imgLabel: '/images/23.jpeg',
+    imgLabel: '/images/23.jpg',
     color:  'bg-blue-50',
     accent: 'text-blue-600',
     border: 'border-blue-100',

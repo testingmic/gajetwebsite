@@ -18,11 +18,11 @@ const service = {
     'Timely delivery and cost efficiency',
   ],
   mainImgKey:   'construction',
-  mainImgLabel: '/images/23.jpeg',
+  mainImgLabel: '/images/23.jpg',
   gallery: [
     { key: 'conGallery1', label: '/images/14.png',   caption: 'Site preparation & foundations' },
     { key: 'conGallery2', label: '/images/21.jpeg',  caption: 'Structural works in progress' },
-    { key: 'conGallery3', label: '/images/22.jpeg',  caption: 'Completed residential project' },
+    { key: 'conGallery3', label: '/images/22.jpeg',  caption: 'Completed road project' },
   ],
   color:  'bg-blue-50',
   accent: 'text-blue-600',
