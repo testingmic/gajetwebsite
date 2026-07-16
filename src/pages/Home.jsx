@@ -245,9 +245,9 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 h-[480px] md:h-[520px]">
             <Animate variant="scale-sm" delay="0ms"   className="rounded-2xl overflow-hidden md:min-h-[260px]"><ImgSlot src={HOME.gallery1} alt="Gallery 1" label="home-gallery-1.jpeg&#10;(tall left panel)" className="w-full md:min-h-[260px]" /></Animate>
             <Animate variant="scale-sm" delay="100ms" className="row-span-2 rounded-2xl overflow-hidden h-full"><ImgSlot src={HOME.gallery2} alt="Gallery 2" label="home-gallery-2.jpeg" className="w-full h-full" /></Animate>
-            <Animate variant="scale-sm" delay="160ms" className="rounded-2xl overflow-hidden md:min-h-[260px]"><ImgSlot src={HOME.gallery3} alt="Gallery 3" label="home-gallery-3.jpeg" className="w-full h-full md:min-h-[260px]" /></Animate>
+            <Animate variant="scale-sm" delay="160ms" className="rounded-2xl overflow-hidden md:min-h-[260px]"><ImgSlot src={HOME.gallery3} alt="Gallery 3" label="home-gallery-3.jpeg" className="w-full h-full md:max-h-[260px]" /></Animate>
             <Animate variant="scale-sm" delay="220ms" className="rounded-2xl overflow-hidden md:min-h-[260px]"><ImgSlot src={HOME.gallery4} alt="Gallery 4" label="home-gallery-4.jpeg" className="w-full h-full md:min-h-[260px]" /></Animate>
-            <Animate variant="scale-sm" delay="280ms" className="rounded-2xl overflow-hidden md:min-h-[260px]"><ImgSlot src={HOME.gallery5} alt="Gallery 5" label="home-gallery-5.jpeg" className="w-full h-full" /></Animate>
+            <Animate variant="scale-sm" delay="280ms" className="rounded-2xl overflow-hidden md:min-h-[260px]"><ImgSlot src={HOME.gallery5} alt="Gallery 5" label="home-gallery-5.jpeg" className="w-full h-full md:min-h-[260px]" /></Animate>
           </div>
         </div>
       </section>

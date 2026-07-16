@@ -24,9 +24,9 @@ export const HOME = {
   project3:   '/images/25.png', // home-project-3.jpg     — Featured project card 3
   gallery1:   '/images/10.jpeg', // home-gallery-1.jpg     — Gallery mosaic top-left (landscape)
   gallery2:   '/images/13.jpeg', // home-gallery-2.jpg     — Gallery mosaic top-right tall
-  gallery3:   '/images/5.jpeg', // home-gallery-3.jpg     — Gallery mosaic bottom-left
+  gallery3:   '/images/12.jpeg', // home-gallery-3.jpg     — Gallery mosaic bottom-left
   gallery4:   '/images/11.jpeg', // home-gallery-4.jpg     — Gallery mosaic bottom-center
-  gallery5:   '/images/2.jpeg', // home-gallery-5.jpg     — Gallery mosaic bottom-right
+  gallery5:   '/images/5.jpeg', // home-gallery-5.jpg     — Gallery mosaic bottom-right
   teamMember1: null, // team-member-1.jpg     — Team photo 1
   teamMember2: null, // team-member-2.jpg     — Team photo 2
   teamMember3: null, // team-member-3.jpg     — Team photo 3
